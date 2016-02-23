@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<in.srain.cube.views.ptr.PtrClassicFrameLayout
+    android:id="@+id/ptr"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:ptr_duration_to_close="200"
+    app:ptr_duration_to_close_header="1000"
+    app:ptr_keep_header_when_refresh="true"
+    app:ptr_pull_to_fresh="false"
+    app:ptr_ratio_of_header_height_to_refresh="1.2"
+    app:ptr_resistance="1.7">
+
+    <com.lzy.ui.HeaderViewPagerLayout
+        android:id="@+id/scrollableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pagerHeader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <com.lzy.headerviewpager.ui.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@mipmap/bg_menu_normal"
+            android:textSize="16sp"
+            app:pstsDividerColor="#00000000"
+            app:pstsIndicatorColor="#2DA4F0"
+            app:pstsIndicatorHeight="2dp"
+            app:pstsShouldExpand="false"
+            app:pstsTextAllCaps="false"
+            app:pstsUnderlineHeight="2dp"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.lzy.ui.HeaderViewPagerLayout>
+</in.srain.cube.views.ptr.PtrClassicFrameLayout>
