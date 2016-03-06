@@ -221,9 +221,6 @@ public class HeaderViewPagerLayout extends LinearLayout {
      */
     private boolean isFirstScrollerExecuted = false;
 
-    /**
-     *
-     */
     @Override
     public void computeScroll() {
         if (mScroller.computeScrollOffset()) {
