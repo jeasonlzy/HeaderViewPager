@@ -1,5 +1,5 @@
 <manifest
-    package="com.lzy.ui"
+    package="com.lzy.widget"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application

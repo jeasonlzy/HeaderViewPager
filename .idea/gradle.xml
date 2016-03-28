@@ -10,7 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/library_headerViewPager" />
+            <option value="$PROJECT_DIR$/header_viewpager" />
           </set>
         </option>
       </GradleProjectSettings>

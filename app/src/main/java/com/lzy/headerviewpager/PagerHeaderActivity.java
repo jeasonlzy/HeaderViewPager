@@ -22,7 +22,7 @@ import com.lzy.headerviewpager.fragment.ScrollViewFragment;
 import com.lzy.headerviewpager.fragment.WebViewFragment;
 import com.lzy.headerviewpager.fragment.base.HeaderViewPagerFragment;
 import com.lzy.headerviewpager.ui.PagerSlidingTabStrip;
-import com.lzy.ui.HeaderViewPagerLayout;
+import com.lzy.widget.HeaderViewPager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +46,7 @@ public class PagerHeaderActivity extends AppCompatActivity {
         fragments.add(RecyclerViewFragment.newInstance());
         fragments.add(WebViewFragment.newInstance());
 
-        final HeaderViewPagerLayout scrollableLayout = (HeaderViewPagerLayout) findViewById(R.id.scrollableLayout);
+        final HeaderViewPager scrollableLayout = (HeaderViewPager) findViewById(R.id.scrollableLayout);
         final PtrFrameLayout ptr = (PtrFrameLayout) findViewById(R.id.ptr);
         ptr.setPtrHandler(new PtrHandler() {
             @Override
@@ -78,7 +78,7 @@ public class PagerHeaderActivity extends AppCompatActivity {
                 scrollableLayout.setCurrentScrollableContainer(fragments.get(position));
             }
         });
-        scrollableLayout.setOnScrollListener(new HeaderViewPagerLayout.OnScrollListener() {
+        scrollableLayout.setOnScrollListener(new HeaderViewPager.OnScrollListener() {
             @Override
             public void onScroll(int currentY, int maxY) {
                 pagerHeader.setTranslationY(currentY / 2);

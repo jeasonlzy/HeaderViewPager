@@ -12,7 +12,7 @@
     app:ptr_ratio_of_header_height_to_refresh="1.2"
     app:ptr_resistance="1.7">
 
-    <com.lzy.ui.HeaderViewPagerLayout
+    <com.lzy.widget.HeaderViewPager
         android:id="@+id/scrollableLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -45,5 +45,5 @@
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
-    </com.lzy.ui.HeaderViewPagerLayout>
+    </com.lzy.widget.HeaderViewPager>
 </in.srain.cube.views.ptr.PtrClassicFrameLayout>

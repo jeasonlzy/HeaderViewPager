@@ -15,7 +15,7 @@ import com.lzy.headerviewpager.fragment.ScrollViewFragment;
 import com.lzy.headerviewpager.fragment.WebViewFragment;
 import com.lzy.headerviewpager.fragment.base.HeaderViewPagerFragment;
 import com.lzy.headerviewpager.ui.PagerSlidingTabStrip;
-import com.lzy.ui.HeaderViewPagerLayout;
+import com.lzy.widget.HeaderViewPager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,7 @@ import java.util.List;
 public class ParallaxHeaderActivity extends AppCompatActivity {
 
     public List<HeaderViewPagerFragment> fragments;
-    private HeaderViewPagerLayout scrollableLayout;
+    private HeaderViewPager scrollableLayout;
     private View image;
 
     @Override
@@ -38,7 +38,7 @@ public class ParallaxHeaderActivity extends AppCompatActivity {
         fragments.add(RecyclerViewFragment.newInstance());
         fragments.add(WebViewFragment.newInstance());
 
-        scrollableLayout = (HeaderViewPagerLayout) findViewById(R.id.scrollableLayout);
+        scrollableLayout = (HeaderViewPager) findViewById(R.id.scrollableLayout);
         image = findViewById(R.id.image);
         PagerSlidingTabStrip tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
@@ -51,7 +51,7 @@ public class ParallaxHeaderActivity extends AppCompatActivity {
                 scrollableLayout.setCurrentScrollableContainer(fragments.get(position));
             }
         });
-        scrollableLayout.setOnScrollListener(new HeaderViewPagerLayout.OnScrollListener() {
+        scrollableLayout.setOnScrollListener(new HeaderViewPager.OnScrollListener() {
             @Override
             public void onScroll(int currentY, int maxY) {
                 image.setTranslationY(currentY / 2);

@@ -1,4 +1,4 @@
-package com.lzy.ui;
+package com.lzy.widget;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -18,7 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Scroller;
 
-public class HeaderViewPagerLayout extends LinearLayout {
+public class HeaderViewPager extends LinearLayout {
 
     private Scroller mScroller;
     private Scroller mScrollerReset;
@@ -48,23 +48,23 @@ public class HeaderViewPagerLayout extends LinearLayout {
         this.onScrollListener = onScrollListener;
     }
 
-    public HeaderViewPagerLayout(Context context) {
+    public HeaderViewPager(Context context) {
         this(context, null);
     }
 
-    public HeaderViewPagerLayout(Context context, AttributeSet attrs) {
+    public HeaderViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context);
     }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    public HeaderViewPagerLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public HeaderViewPager(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public HeaderViewPagerLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public HeaderViewPager(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(context);
     }

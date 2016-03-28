@@ -7,10 +7,13 @@
  ![image](https://github.com/jeasonlzy0216/HeaderViewPager/blob/master/screenshots/demo1.png)![image](https://github.com/jeasonlzy0216/HeaderViewPager/blob/master/screenshots/demo2.gif)![image](https://github.com/jeasonlzy0216/HeaderViewPager/blob/master/screenshots/demo3.gif)![image](https://github.com/jeasonlzy0216/HeaderViewPager/blob/master/screenshots/demo4.gif)![image](https://github.com/jeasonlzy0216/HeaderViewPager/blob/master/screenshots/demo5.gif)
 
 ## 1.用法
-
 使用前，对于Android Studio的用户，可以选择添加:
 ```java
-    compile project(':library_headerViewPager')
+	compile 'com.lzy.widget:view-core:0.1.4'
+```
+或者使用
+```java
+    compile project(':header_viewpager')
 ```
 
 ## 2.实现原理
