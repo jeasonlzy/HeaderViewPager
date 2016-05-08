@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="HorizontalListView">
-        <attr name="dividerWidth" format="dimension" />
-        <attr name="android:divider" />
-        <attr name="android:requiresFadingEdge" />
-        <attr name="android:fadingEdgeLength" />
-    </declare-styleable>
-
     <declare-styleable name="PagerSlidingTabStrip">
         <attr name="pstsIndicatorColor" format="color"/>
         <attr name="pstsUnderlineColor" format="color"/>
@@ -19,5 +12,23 @@
         <attr name="pstsTabBackground" format="reference"/>
         <attr name="pstsShouldExpand" format="boolean"/>
         <attr name="pstsTextAllCaps" format="boolean"/>
+    </declare-styleable>
+
+    <!--圆形指示器-->
+    <declare-styleable name="CircleIndicator">
+        <attr name="ci_normalRadius" format="dimension"/>
+        <attr name="ci_normalRadiusColor" format="color"/>
+        <attr name="ci_selectedRadius" format="dimension"/>
+        <attr name="ci_selectedRadiusColor" format="color"/>
+        <attr name="ci_dotPadding" format="dimension"/>
+        <attr name="ci_isStroke" format="boolean"/>
+        <attr name="ci_normalStrokeWidth" format="dimension"/>
+        <attr name="ci_isBlink" format="boolean"/>
+    </declare-styleable>
+
+    <!--循环滑动的ViewPager-->
+    <declare-styleable name="LoopViewPager">
+        <attr name="lvp_isAutoLoop" format="boolean"/>
+        <attr name="lvp_delayTime" format="integer"/>
     </declare-styleable>
 </resources>

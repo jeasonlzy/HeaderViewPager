@@ -2,7 +2,7 @@ package com.lzy.headerviewpager.fragment.base;
 
 import android.support.v4.app.Fragment;
 
-import com.lzy.widget.HeaderViewPager;
+import com.lzy.widget.HeaderScrollHelper;
 
 /**
  * ================================================
@@ -13,4 +13,4 @@ import com.lzy.widget.HeaderViewPager;
  * 修订历史：
  * ================================================
  */
-public abstract class HeaderViewPagerFragment extends Fragment implements HeaderViewPager.ScrollableContainer {}
+public abstract class HeaderViewPagerFragment extends Fragment implements HeaderScrollHelper.ScrollableContainer {}

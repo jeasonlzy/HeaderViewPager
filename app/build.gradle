@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.lzy.myapplication"
-        minSdkVersion 8
+        minSdkVersion 11
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
@@ -22,7 +22,7 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'in.srain.cube:ultra-ptr:1.0.11'
 
-    compile 'com.lzy.widget:view-core:0.1.5'
+    compile 'com.lzy.widget:view-core:0.2.0'
+//    compile project(':header_viewpager')
 }

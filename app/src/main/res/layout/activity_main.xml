@@ -1,24 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:id="@+id/scrollableLayout"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/pagerHeader"
+    <com.lzy.widget.HeaderViewPager
+        android:id="@+id/scrollableLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="pagerHeader"
-        android:textAllCaps="false"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:hvp_topOffset="50dp">
 
-    <Button
-        android:id="@+id/parallaxHeader"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="onClick"
-        android:text="parallaxHeader"
-        android:textAllCaps="false"/>
-</LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <com.lzy.widget.loop.LoopViewPager
+                android:id="@+id/pagerHeader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:lvp_delayTime="2000"
+                app:lvp_isAutoLoop="true"/>
+
+            <com.lzy.widget.tab.CircleIndicator
+                android:id="@+id/ci"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:background="#4000"
+                app:ci_normalRadiusColor="#FFF"
+                app:ci_selectedRadiusColor="#FFF"/>
+        </RelativeLayout>
+
+        <com.lzy.widget.tab.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@mipmap/bg_menu_normal"
+            android:textSize="16sp"
+            app:pstsDividerColor="#00000000"
+            app:pstsIndicatorColor="#2DA4F0"
+            app:pstsIndicatorHeight="2dp"
+            app:pstsShouldExpand="false"
+            app:pstsTextAllCaps="false"
+            app:pstsUnderlineHeight="2dp"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.lzy.widget.HeaderViewPager>
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/include_titlebar"/>
+</FrameLayout>

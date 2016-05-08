@@ -13,7 +13,7 @@ import android.widget.AbsListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.lzy.headerviewpager.ColorUtil;
+import com.lzy.headerviewpager.Utils;
 import com.lzy.headerviewpager.R;
 import com.lzy.headerviewpager.fragment.base.HeaderViewPagerFragment;
 
@@ -90,7 +90,7 @@ public class RecyclerViewFragment extends HeaderViewPagerFragment {
                 ViewGroup.LayoutParams params = new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 300);
                 itemView.setLayoutParams(params);
                 itemView.setText(strings.get(position));
-                itemView.setBackgroundColor(ColorUtil.generateBeautifulColor());
+                itemView.setBackgroundColor(Utils.generateBeautifulColor());
             }
         }
     }

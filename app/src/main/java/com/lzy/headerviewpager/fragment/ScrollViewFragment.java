@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.lzy.headerviewpager.ColorUtil;
+import com.lzy.headerviewpager.Utils;
 import com.lzy.headerviewpager.R;
 import com.lzy.headerviewpager.fragment.base.HeaderViewPagerFragment;
 
@@ -35,7 +35,7 @@ public class ScrollViewFragment extends HeaderViewPagerFragment {
         LinearLayout views = (LinearLayout) scrollView.findViewById(R.id.container);
         for (int i = 0; i < 10; i++) {
             View view = new View(getActivity());
-            view.setBackgroundColor(ColorUtil.generateBeautifulColor());
+            view.setBackgroundColor(Utils.generateBeautifulColor());
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 300);
             view.setLayoutParams(params);
             views.addView(view);

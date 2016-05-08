@@ -22,15 +22,25 @@ import android.widget.ScrollView;
 public class HeaderScrollHelper {
 
     private int sysVersion;         //当前sdk版本，用于判断api版本
+    private ScrollableContainer mCurrentScrollableContainer;
 
     public HeaderScrollHelper() {
         sysVersion = Build.VERSION.SDK_INT;
     }
 
+    /** 包含有 ScrollView ListView RecyclerView 的组件 */
+    public interface ScrollableContainer {
+
+        /** @return ScrollView ListView RecyclerView 或者其他的布局的实例 */
+        View getScrollableView();
+    }
+
+    public void setCurrentScrollableContainer(ScrollableContainer scrollableContainer) {
+        this.mCurrentScrollableContainer = scrollableContainer;
+    }
+
     private View getScrollableView() {
-        if (mCurrentScrollableContainer == null) {
-            return null;
-        }
+        if (mCurrentScrollableContainer == null) return null;
         return mCurrentScrollableContainer.getScrollableView();
     }
 

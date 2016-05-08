@@ -14,7 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.lzy.headerviewpager.ColorUtil;
+import com.lzy.headerviewpager.Utils;
 import com.lzy.headerviewpager.R;
 import com.lzy.headerviewpager.fragment.base.HeaderViewPagerFragment;
 
@@ -93,7 +93,7 @@ public class ListViewFragment extends HeaderViewPagerFragment {
             ViewGroup.LayoutParams params = new AbsListView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 300);
             textView.setLayoutParams(params);
             textView.setText(getItem(position));
-            textView.setBackgroundColor(ColorUtil.generateBeautifulColor());
+            textView.setBackgroundColor(Utils.generateBeautifulColor());
             return convertView;
         }
     }

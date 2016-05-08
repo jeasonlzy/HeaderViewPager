@@ -17,10 +17,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ParallaxHeaderActivity">
-        </activity>
-        <activity android:name=".PagerHeaderActivity">
-        </activity>
     </application>
 
 </manifest>
