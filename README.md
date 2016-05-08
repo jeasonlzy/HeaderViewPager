@@ -4,7 +4,7 @@
 该项目参考了：[https://github.com/cpoopc/ScrollableLayout](https://github.com/cpoopc/ScrollableLayout) 喜欢原作的可以去使用。相比原项目，代码更简单易懂，扩展性更高，欢迎大家下载体验本项目，如果使用过程中遇到什么问题，欢迎反馈。
 
 ## 演示
- ![image](http://7xss53.com2.z0.glb.clouddn.com/headerviewpager/demo1.png)![image](http://7xss53.com2.z0.glb.clouddn.com/headerviewpager/demo2.gif)![image](http://7xss53.com2.z0.glb.clouddn.com/headerviewpager/demo3.gif)
+ ![image](http://7xss53.com2.z0.glb.clouddn.com/headerviewpager/demo1.png) ![image](http://7xss53.com2.z0.glb.clouddn.com/headerviewpager/demo2.gif) ![image](http://7xss53.com2.z0.glb.clouddn.com/headerviewpager/demo3.gif)
 ## 1.用法
 该项目和我github上其他的view相关的项目已经一起打包上传到jCenter仓库中（源码地址 [https://github.com/jeasonlzy0216/ViewCore](https://github.com/jeasonlzy0216/ViewCore) ），使用的时候可以直接使用compile依赖，用法如下
 ###该项目中使用到的大部分自定义控件，均来源于上述仓库
