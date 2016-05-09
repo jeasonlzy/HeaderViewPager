@@ -84,7 +84,7 @@ public class HeaderViewPager extends LinearLayout {
         mHeadHeight = mHeadView.getMeasuredHeight();
         maxY = mHeadHeight - topOffset;
         //让测量高度加上头部的高度
-        super.onMeasure(widthMeasureSpec, MeasureSpec.makeMeasureSpec(MeasureSpec.getSize(heightMeasureSpec) + mHeadHeight, MeasureSpec.EXACTLY));
+        super.onMeasure(widthMeasureSpec, MeasureSpec.makeMeasureSpec(MeasureSpec.getSize(heightMeasureSpec) + maxY, MeasureSpec.EXACTLY));
     }
 
     /** @param disallowIntercept 作用同 requestDisallowInterceptTouchEvent */

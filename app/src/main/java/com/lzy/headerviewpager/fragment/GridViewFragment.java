@@ -14,8 +14,8 @@ import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.lzy.headerviewpager.Utils;
 import com.lzy.headerviewpager.R;
+import com.lzy.headerviewpager.Utils;
 import com.lzy.headerviewpager.fragment.base.HeaderViewPagerFragment;
 
 import java.util.ArrayList;
@@ -40,7 +40,8 @@ public class GridViewFragment extends HeaderViewPagerFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        gridView = (GridView) inflater.inflate(R.layout.fragment_gridview, container, false);
+        View view = inflater.inflate(R.layout.fragment_gridview, container, false);
+        gridView = (GridView) view.findViewById(R.id.gridView);
         gridView.setAdapter(new MyAdapter());
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -48,7 +49,7 @@ public class GridViewFragment extends HeaderViewPagerFragment {
                 Toast.makeText(getActivity(), "点击了条目" + position, Toast.LENGTH_SHORT).show();
             }
         });
-        return gridView;
+        return view;
     }
 
     @Override

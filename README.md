@@ -9,7 +9,7 @@
 该项目和我github上其他的view相关的项目已经一起打包上传到jCenter仓库中（源码地址 [https://github.com/jeasonlzy0216/ViewCore](https://github.com/jeasonlzy0216/ViewCore) ），使用的时候可以直接使用compile依赖，用法如下
 ###该项目中使用到的大部分自定义控件，均来源于上述仓库
 ```java
-	compile 'com.lzy.widget:view-core:0.2.0'
+	compile 'com.lzy.widget:view-core:0.2.1'
 ```
 或者使用
 ```java

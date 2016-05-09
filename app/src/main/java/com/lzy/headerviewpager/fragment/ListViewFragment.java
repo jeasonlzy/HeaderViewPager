@@ -14,8 +14,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.lzy.headerviewpager.Utils;
 import com.lzy.headerviewpager.R;
+import com.lzy.headerviewpager.Utils;
 import com.lzy.headerviewpager.fragment.base.HeaderViewPagerFragment;
 
 import java.util.ArrayList;
@@ -40,7 +40,8 @@ public class ListViewFragment extends HeaderViewPagerFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        listView = (ListView) inflater.inflate(R.layout.fragment_listview, container, false);
+        View view = inflater.inflate(R.layout.fragment_listview, container, false);
+        listView = (ListView) view.findViewById(R.id.listView);
         listView.setAdapter(new MyAdapter());
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -48,7 +49,7 @@ public class ListViewFragment extends HeaderViewPagerFragment {
                 Toast.makeText(getActivity(), "点击了条目" + position, Toast.LENGTH_SHORT).show();
             }
         });
-        return listView;
+        return view;
     }
 
     @Override

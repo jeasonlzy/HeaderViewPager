@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ListView android:id="@+id/listView"
-          xmlns:android="http://schemas.android.com/apk/res/android"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
-</ListView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#987"
+        android:gravity="center"
+        android:text="测试布局"
+        android:textColor="#FFF"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8548"
+        android:src="@mipmap/ic_launcher"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

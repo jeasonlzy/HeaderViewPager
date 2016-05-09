@@ -23,6 +23,6 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:23.1.1'
 
-    compile 'com.lzy.widget:view-core:0.2.0'
+    compile 'com.lzy.widget:view-core:0.2.1'
 //    compile project(':header_viewpager')
 }

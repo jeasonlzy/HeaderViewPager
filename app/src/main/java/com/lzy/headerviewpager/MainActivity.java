@@ -56,6 +56,7 @@ public class MainActivity extends BaseActivity {
         status_bar_fix.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, Utils.getStatusHeight(this)));
         titleBar_title = (TextView) titleBar.findViewById(R.id.title);
         titleBar_Bg.setAlpha(0);
+        status_bar_fix.setAlpha(0);
         titleBar_title.setText("标题栏透明度(0%)");
         pagerHeader = (ViewPager) findViewById(R.id.pagerHeader);
         pagerHeader.setAdapter(new HeaderAdapter());
