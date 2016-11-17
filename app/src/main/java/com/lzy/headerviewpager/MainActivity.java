@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.lzy.headerviewpager.fragment.GridViewFragment;
 import com.lzy.headerviewpager.fragment.ListViewFragment;
@@ -131,15 +132,21 @@ public class MainActivity extends BaseActivity {
     private class HeaderAdapter extends PagerAdapter {
 
         public int[] images = new int[]{//
-                R.mipmap.image1, R.mipmap.image2, R.mipmap.image3,//
-                R.mipmap.image4, R.mipmap.image5};
+                                        R.mipmap.image1, R.mipmap.image2, R.mipmap.image3,//
+                                        R.mipmap.image4, R.mipmap.image5};
 
         @Override
-        public Object instantiateItem(ViewGroup container, int position) {
+        public Object instantiateItem(ViewGroup container, final int position) {
             ImageView imageView = new ImageView(getApplicationContext());
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setImageResource(images[position]);
             container.addView(imageView);
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(getApplicationContext(), "第" + position + "页", Toast.LENGTH_SHORT).show();
+                }
+            });
             return imageView;
         }
 
