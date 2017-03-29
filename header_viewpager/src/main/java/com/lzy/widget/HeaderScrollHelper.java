@@ -2,6 +2,7 @@ package com.lzy.widget;
 
 import android.annotation.SuppressLint;
 import android.os.Build;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -54,19 +55,41 @@ public class HeaderScrollHelper {
         if (scrollableView == null) {
             throw new NullPointerException("You should call ScrollableHelper.setCurrentScrollableContainer() to set ScrollableContainer.");
         }
-        if (scrollableView instanceof AdapterView) {
-            return isAdapterViewTop((AdapterView) scrollableView);
+        return !canViewScrollUp(scrollableView);
+//        if (scrollableView instanceof AdapterView) {
+//            return isAdapterViewTop((AdapterView) scrollableView);
+//        }
+//        if (scrollableView instanceof ScrollView) {
+//            return isScrollViewTop((ScrollView) scrollableView);
+//        }
+//        if (scrollableView instanceof RecyclerView) {
+//            return isRecyclerViewTop((RecyclerView) scrollableView);
+//        }
+//        if (scrollableView instanceof WebView) {
+//            return isWebViewTop((WebView) scrollableView);
+//        }
+//        throw new IllegalStateException("scrollableView must be a instance of AdapterView|ScrollView|RecyclerView");
+    }
+
+    /**
+     * 判断当前view是否往上滑动
+     *
+     * @param view
+     * @return
+     */
+    private boolean canViewScrollUp(View view) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+            if (view instanceof AbsListView) {
+                final AbsListView absListView = (AbsListView) view;
+                return absListView.getChildCount() > 0
+                        && (absListView.getFirstVisiblePosition() > 0 ||
+                        absListView.getChildAt(0).getTop() < absListView.getPaddingTop());
+            } else {
+                return ViewCompat.canScrollVertically(view, -1) || view.getScrollY() > 0;
+            }
+        } else {
+            return ViewCompat.canScrollVertically(view, -1);
         }
-        if (scrollableView instanceof ScrollView) {
-            return isScrollViewTop((ScrollView) scrollableView);
-        }
-        if (scrollableView instanceof RecyclerView) {
-            return isRecyclerViewTop((RecyclerView) scrollableView);
-        }
-        if (scrollableView instanceof WebView) {
-            return isWebViewTop((WebView) scrollableView);
-        }
-        throw new IllegalStateException("scrollableView must be a instance of AdapterView|ScrollView|RecyclerView");
     }
 
     private boolean isRecyclerViewTop(RecyclerView recyclerView) {
